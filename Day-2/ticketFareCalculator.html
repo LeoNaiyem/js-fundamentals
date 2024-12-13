@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Fare Calculator</title>
+  </head>
+  <body>
+    <script>
+      let ticket = 800;
+      let age = 12;
+      let passenger = "children";
+      let cost = 0;
+
+      if (age < 10) {
+        document.write(`You can travel for FREE! Cost: ${cost}`);
+      } else if (passenger === "student") {
+        document.write(`You got 50% discount! Cost: ${ticket / 2}`);
+        cost = ticket / 2;
+      } else if (age >= 60) {
+        document.write(`You got 15% discount! Cost: ${ticket * 0.15}`);
+        cost = ticket * 0.15;
+      } else {
+        cost = ticket;
+        document.write(`Sorry! No discount for you. Cost: ${cost}`);
+      }
+    </script>
+  </body>
+</html>

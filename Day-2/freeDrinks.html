@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Drinks</title>
+  </head>
+  <body>
+    <script>
+      let total = 0;
+      const burgerPrice = 501;
+      if (burgerPrice > 500) {
+        total = burgerPrice;
+        document.write("Total: " + total + "( You a coke for FREE!)");
+      } else {
+        total = burgerPrice + 30;
+        document.write(`Total: ${total} (Extra 30tk added for coke)`);
+      }
+    </script>
+  </body>
+</html>

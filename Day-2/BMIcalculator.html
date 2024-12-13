@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate BMI</title>
+  </head>
+  <body>
+    <script>
+      function BMI(weight, height) {
+        let r = weight / height ** 2;
+        return r;
+      }
+      const yourBMI = BMI(55, 1.73736).toFixed(2);
+      if (yourBMI < 30) {
+        if (yourBMI < 18.5) {
+          document.write(`Your BMI ${yourBMI} - (You are underweight!)`);
+        }
+        if (yourBMI >= 18.5 && yourBMI <= 24.9) {
+          document.write(`Your BMI ${yourBMI} - (You are normal!)`);
+        }
+        if (yourBMI >= 25 && yourBMI <= 29.9) {
+          document.write(`Your BMI ${yourBMI} - (You are overweight!)`);
+        }
+      } else {
+        document.write(`Your BMI ${yourBMI} - (You are Obese!)`);
+      }
+    </script>
+  </body>
+</html>

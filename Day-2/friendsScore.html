@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friend's Score</title>
+  </head>
+  <body>
+    <script>
+      let myScore = 80;
+      let friendsScore = 39;
+      if (myScore >= 80) {
+        if (friendsScore >= 80) {
+          document.write(`Let's go for Lunch.`);
+        }
+        if (friendsScore < 80 && friendsScore >= 60) {
+          document.write(`Good luck for next time.`);
+        }
+        if (friendsScore < 60 && friendsScore >= 40) {
+          document.write(`Don't see his message.`);
+        }
+        if (friendsScore < 40) {
+          document.write(`Block Him`);
+        }
+        if (friendsScore >= 80) {
+          document.write(`Let's go for Lunch.`);
+        }
+      } else {
+        document.write(`Go home and sleep. Act as You are Sad!`);
+      }
+    </script>
+  </body>
+</html>

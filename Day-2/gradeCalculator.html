@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grade Calculator</title>
+  </head>
+  <body>
+    <script>
+      function calculateGrade(num) {
+        if (num >= 90 && num <= 100) {
+          document.write(`You Got A+ (Your score is: ${num})`);
+        } else if (num >= 80 && num < 90) {
+          document.write(`You Got B (Your score is: ${num})`);
+        } else if (num >= 70 && num < 80) {
+          document.write(`You Got C (Your score is: ${num})`);
+        } else if (num >= 60 && num < 70) {
+          document.write(`You Got D (Your score is: ${num})`);
+        } else if (num < 60) {
+          document.write(`You Got F (Your score is: ${num})`);
+        }
+      }
+      calculateGrade(80);
+    </script>
+  </body>
+</html>

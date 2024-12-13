@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array</h1>
+    <script>
+      let arr = [10, 20, 30, 40, 50];
+      let newArr = arr.push(12); //it will give new array length
+      document.write(
+        "New array " + arr + " New array length " + arr.length + "<br>"
+      );
+
+      let popedArray = arr.pop(); // it will give last removed element
+      document.write(popedArray + "<br>");
+      document.write("New array " + arr + " New array length " + arr.length);
+      document.write("<br>");
+      let unsiftedArray = arr.unshift("i am new here"); //it will give new array length.
+      document.write(unsiftedArray);
+      document.write("<br>");
+      document.write(arr);
+      let shiftedArray = arr.shift();
+      document.write("<br>");
+      document.write(arr);
+      document.write("<br>");
+      document.write(arr.splice(1, 3));
+      document.write("<br>");
+      document.write(arr);
+      let friends = ["messi", "neymar", "ronaldo", "suarez", "pique"];
+      let friends1 = friends.slice(1, 3);
+      document.write("<br>");
+      document.write(friends1);
+      document.write("<br>");
+      document.write(friends);
+      let newFriends = friends.splice(1, 1, "osman");
+      document.write("<br>");
+      document.write(newFriends);
+      document.write("<br>");
+      document.write(friends);
+      document.write("<br>");
+      let color = ["white", "blue", "black"];
+      document.write(arr.concat(friends).concat(color));
+
+      let numbers = [10, 20, 30, 40, 50];
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Task</title>
+  </head>
+  <body>
+    <script>
+      const fruits = ["banana", "apple", "guava", "date", "orange"];
+      document.write(`third index element: ${fruits[3]} <br>`);
+      fruits[2] = "jambura";
+      document.write(fruits);
+      document.write("<br>" + "new line" + "<br>");
+      const touristSports = ["cox bazar", "saint martin", "sea beach"];
+      touristSports.push("bandar ban");
+      touristSports.push("sundar ban", "kua katha");
+      const lastRemoved = touristSports.pop();
+      document.write(lastRemoved);
+      document.write("<br>" + "new line" + "<br>");
+      document.write(touristSports);
+
+      const books = ["javascript", "php", "my sql", "react", "mongoDB"];
+      const output = books.includes("javascript");
+      document.write("<br>" + "new line" + "<br>");
+      output ? document.write("yes it's here!") : document.write("error 404");
+      document.write("<br>" + "new line" + "<br>");
+      document.write(output);
+      document.write("<br>" + "new line" + "<br>");
+
+      const isPresent = true;
+      const num = 12;
+      const name = "A. Kari";
+      const numbs = [12, 45, 65, 32, 98, 78, 58, 22];
+      document.write(Array.isArray(name));
+      document.write("<br>" + "new line" + "<br>");
+
+      const arrayOutput = Array.isArray(numbs);
+      arrayOutput
+        ? document.write("yes it is an array")
+        : document.write("no it is not an array");
+    </script>
+  </body>
+</html>

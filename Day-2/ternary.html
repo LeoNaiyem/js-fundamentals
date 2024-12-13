@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ternary operator</title>
+  </head>
+  <body>
+    <script>
+      //   let price = 10000;
+      //   const rCustomer = true;
+      //   if (rCustomer === true) {
+      //     if (price > 1000) {
+      //       price =price -200;
+      //     }
+      //   } else {
+      //     if (price > 3000) {
+      //       price =price/2;
+      //     }
+      //   }
+      //   let price = 500;
+      //     const isLeader = true;
+      //   if (isLeader === true) {
+      //     price = 0;
+      //   } else {
+      //     price = 500 + 100;
+      //   }
+      //   document.write(price);
+      //   price = isLeader === true ? 0 : price + 100;
+      //   document.write(price);
+      let price = 1500;
+      const isLeader = true;
+      //   if (isLeader === true) {
+      //     if (price < 2000) {
+      //       price = 0;
+      //     }
+      //     price=price/2
+      //   } else {
+      //     price = price + 100;
+      //   }
+      //   document.write(price);
+      price =
+        isLeader === true ? (price < 2000 ? 100 : price / 2) : price + 100;
+      document.write(price);
+    </script>
+  </body>
+</html>
