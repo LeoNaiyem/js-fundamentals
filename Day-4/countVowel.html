@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Vowel</title>
+  </head>
+  <body>
+    <h1>How Many Vowels are there in the string</h1>
+    <script>
+      const str =
+        "The split() method is the most commonly used approach to convert a string into an array based on a delimiter.";
+      function countVowel(string) {
+        const lowerString = string.toLowerCase();
+        const charArray = lowerString.split("");
+        const vowelArray = [];
+        for (const char of charArray) {
+          if (
+            char === "a" ||
+            char === "e" ||
+            char === "i" ||
+            char === "o" ||
+            char === "u"
+          ) {
+            console.log(char);
+            vowelArray.push(char);
+          }
+        }
+        return vowelArray.length;
+      }
+      const totalVowel = countVowel(str);
+      document.write(totalVowel);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repeated</title>
+  </head>
+  <body>
+    <h1>Find how many times the number 5 is repeated.</h1>
+
+    <script>
+      const numbers = [5, 6, 11, 12, 98, 5];
+      const numbers2 = [5, 6, 11, 12, 98, 5];
+      function howManyTimes(arr, num) {
+        const repeatedNumber = [];
+        for (const number of arr) {
+          if (number === num) {
+            repeatedNumber.push(number);
+          }
+        }
+        const count = repeatedNumber.length;
+        return count;
+      }
+      const output = howManyTimes(numbers, 5);
+      const output2 = howManyTimes(numbers2, 25);
+      document.write(output, "<br>");
+      document.write(output2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For loop task</title>
+  </head>
+  <body>
+    <script>
+      // 1. "I will invest at least 6 hrs every single day for next 60 days!" this message 60 times. So display this.
+      for (let i = 1; i <= 60; i++) {
+        //   document.write(
+        //     `${i}. I will invest at least 6 hrs every single day for next 60 days! <br>`
+        //   );
+      }
+
+      // 2.  Find all the odd numbers from 61 to 100.
+      for (let i = 61; i <= 100; i++) {
+        let mod = i % 2;
+        // if(mod != 0){
+        //     document.write(`${i} <br>`);
+        // }
+        // mod != 0 ? document.write(`${i} <br>`) : "";
+      }
+
+      // 3.  Find all the even numbers from 78 to 98.
+      for (let i = 78; i <= 98; i++) {
+        let mod = i % 2;
+        // mod === 0
+        //   ? document.write(`${i}. is an even number <br>`)
+        //   : document.write(`${i}. is an odd number <br>`);
+      }
+
+      // 4.  Display sum of all the odd numbers from 91 to 129.
+      let sum = 0;
+      for (let i = 91; i <= 129; i++) {
+        const mod = i % 2;
+        sum = mod !== 0 ? sum + i : sum;
+      }
+      document.write(`${sum} <br>`);
+
+      function giveOddNumbers(start, end) {
+        for (let i = start; i <= end; i++) {
+          let mod = i % 2;
+          mod != 0 ? document.write(`${i} <br>`) : "";
+        }
+      }
+      //   giveOddNumbers(91, 129);
+
+      // 5. Implement a countdown timer that counts down from 81 to 65.
+      for (let i = 81; i >= 65; i--) {
+        document.write(`${i} <br>`);
+      }
+    </script>
+  </body>
+</html>
