@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find the largest word from a string.</title>
+  </head>
+  <body>
+    <h1>Find largest word</h1>
+
+    <script>
+      const str = "Find the largest word from a string.";
+      function findLargestWord(string) {
+        const words = string.split(" ");
+        let largestWord = "";
+        for (word of words) {
+          if (word.length > largestWord.length) {
+            largestWord = word;
+          }
+        }
+        return largestWord;
+      }
+      const output = findLargestWord(str);
+      document.write(output);
+    </script>
+  </body>
+</html>
