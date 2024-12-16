@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show ID Card</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        margin: 0;
+      }
+
+      div {
+        margin-bottom: 5px;
+      }
+
+      fieldset {
+        border: 1px solid salmon;
+        padding: 15px 20px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <fieldset>
+      <legend>Student ID card</legend>
+      <form action="#" name="IdForm">
+        <div>
+          Name<br />
+          <input type="text" name="name" />
+        </div>
+        <div>
+          Mobile<br />
+          <input type="number" name="mobile" />
+        </div>
+        <div>
+          Division<br />
+          <select name="division">
+            <option>Dhaka</option>
+            <option>Chittagong</option>
+            <option>Khulna</option>
+            <option>Cox's Bazar</option>
+          </select>
+        </div>
+        <div>
+          Subjects<br />
+          <input type="checkbox" name="subject" value="Bengali" /> Bengali
+          <input type="checkbox" name="subject" value="English" /> English
+          <input type="checkbox" name="subject" value="Math" /> Math
+        </div>
+        <div>
+          Gender<br />
+          <input type="radio" name="gender" value="Male" /> Male
+          <input type="radio" name="gender" value="Female" /> Female
+          <input type="radio" name="gender" value="Other" /> Other
+        </div>
+
+        <div>
+          Address<br />
+          <textarea name="address"></textarea>
+        </div>
+        <div>
+          <input onclick="showIdCard()" type="button" value="Submit" />
+        </div>
+      </form>
+    </fieldset>
+    <script>
+      function showIdCard() {
+        let name = document.IdForm.name.value;
+        let mobile = document.IdForm.mobile.value;
+        let division = document.IdForm.division.value;
+        let subjects = document.IdForm.subject;
+        let genders = document.IdForm.gender;
+
+        let selectedSubjects = "";
+        for (sub of subjects) {
+          // if (sub.checked) {
+          //     selectedSubjects = selectedSubjects + sub.value + ',';
+          // }
+          selectedSubjects = sub.checked
+            ? selectedSubjects + sub.value + ","
+            : selectedSubjects;
+        }
+
+        let gender = "";
+        for (const gen of genders) {
+          gender = gen.checked ? gen.value : gender;
+        }
+
+        const address = document.IdForm.address.value;
+        const popupWindow = open(
+          "",
+          "",
+          "width=500, height=500, top=100,left=900"
+        );
+        const w = popupWindow.document;
+        w.write(`<h1>ID Card Of ${name}</h1>`);
+        w.write(`<p>Name: ${name}</p>`);
+        w.write(`<p>Mobile: ${mobile}</p>`);
+        w.write(`<p>Division: ${division}</p>`);
+        w.write(`<p>Subjects: ${selectedSubjects}</p>`);
+        w.write(`<p>Gender: ${gender}</p>`);
+        w.write(`<p>Address: ${address}</p>`);
+        w.write(
+          `<input style="margin-right:10px" type='button' onclick='self.close()' value='Close'/>`
+        );
+        w.write(`<input type='button' onclick='self.print()' value='Print'/>`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate Random Number</title>
+  </head>
+  <body>
+    <h1>Random Number From 10 to 20</h1>
+
+    <script>
+      function generateRandomNumber(min, max) {
+        const minCeiled = Math.ceil(min);
+        const maxFloored = Math.floor(max);
+        let random = Math.random();
+        return Math.floor(random * (max - min + 1) + minCeiled);
+      }
+      const output = generateRandomNumber(10, 20);
+      document.write(output);
+    </script>
+  </body>
+</html>
