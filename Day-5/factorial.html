@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factorial</title>
+  </head>
+  <body>
+    <h1>Calculate Factorial</h1>
+    <p id="showHere"></p>
+
+    <script>
+      //   var f = [];
+      //   function factorial(n) {
+      //     if (n == 0 || n == 1) return 1;
+      //     if (f[n] > 0) return f[n];
+      //     return (f[n] = factorial(n - 1) * n);
+      //   }
+      function calculateFactorial(num) {
+        let factorial = 1;
+        if (num < 0)
+          return [num, "'Factorial in not defined for negative numbers'"];
+        if (num == 1 || num == 0) return [num, 1];
+        for (let i = 2; i <= num; i++) {
+          factorial *= i;
+        }
+        return [num, factorial];
+      }
+
+      const [num, factorial] = calculateFactorial(15);
+
+      const container = document.getElementById("showHere");
+      container.innerText = `Factorial of ${num} is: ${factorial} `;
+    </script>
+  </body>
+</html>
