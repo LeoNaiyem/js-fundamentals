@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numbers = [];
+      numbers.push(
+        parseInt(prompt("Enter first number.")),
+        parseInt(prompt("Enter second number.")),
+        parseInt(prompt("Enter third number."))
+      );
+      let largest = numbers[0];
+      let smallest = numbers[0];
+      for (num of numbers) {
+        if (num > largest) {
+          largest = num;
+        } else if (num < smallest) {
+          smallest = num;
+        }
+      }
+      document.write("Largest Number: ", largest, "<br>");
+      document.write("Smallest number: ", smallest);
+    </script>
+  </body>
+</html>

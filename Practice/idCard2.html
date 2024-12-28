@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student ID Card</title>
+    <style>
+      body {
+        box-sizing: border-box;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      fieldset {
+        width: 40%;
+      }
+      div {
+        margin-bottom: 10px;
+      }
+      input {
+        padding: 5px;
+      }
+      select {
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Student ID Card Form</legend>
+      <form action="#" name="stForm">
+        <div>
+          Name: <br />
+          <input type="text" name="name" placeholder="Your full name" />
+        </div>
+        <div>
+          Phone: <br />
+          <input type="text" name="phone" placeholder="Your phone number" />
+        </div>
+        <div>
+          Home District: <br />
+          <select name="district" id="district">
+            <option value="Dhaka">Dhaka</option>
+            <option value="Chittagong">Chittagong</option>
+            <option value="Khulna">Khulna</option>
+            <option value="Rajshahi">Rajshahi</option>
+          </select>
+        </div>
+        <div>
+          Subjects: <br />
+          <input type="checkbox" name="subject" value="Bangla" />Bangla
+          <input type="checkbox" name="subject" value="Math" />Math
+          <input type="checkbox" name="subject" value="English" />English
+          <input type="checkbox" name="subject" value="Science" />Science
+        </div>
+        <div>
+          Gender: <br />
+          <input type="radio" name="gender" value="Male" />Male
+          <input type="radio" name="gender" value="Female" />Female
+          <input type="radio" name="gender" value="Other" />Other
+        </div>
+        <div>
+          Address:
+          <textarea
+            name="address"
+            id="address"
+            placeholder="Your home address"
+            cols="25"
+            rows="3"
+          ></textarea>
+        </div>
+        <div>
+          <input type="button" value="Submit" id="submitBtn" />
+          <input type="reset" value="Reset" id="resetBtn" />
+        </div>
+      </form>
+    </fieldset>
+
+    <script>
+      const submitBtn = document.getElementById("submitBtn");
+      submitBtn.addEventListener("click", (e) => {
+        console.log(e.target.value);
+        const name = document.stForm.name.value;
+        const phone = document.stForm.phone.value;
+        const district = document.stForm.district.value;
+        const subjects = document.stForm.subject;
+        const genders = document.stForm.gender;
+        const address = document.stForm.address.value;
+
+        let selectedSubs = "";
+        for (sub of subjects) {
+          if (sub.checked) {
+            selectedSubs += sub.value + ",";
+          }
+        }
+        let selectedGender = "";
+        for (gen of genders) {
+          if (gen.checked) {
+            selectedGender = gen.value;
+          }
+        }
+
+        const pW = open("", "", `width=400, height=400, left=400, top=100`);
+        pW.document.write(`Name: ${name} <br>`);
+        pW.document.write(`Phone: ${phone} <br>`);
+        pW.document.write(`District: ${district} <br>`);
+        pW.document.write(`Subjects: ${selectedSubs} <br>`);
+        pW.document.write(`Gender: ${selectedGender} <br>`);
+        pW.document.write(`Address: ${address} <br><br>`);
+        pW.document.write(
+          `<input type="button" onclick="self.close() " value="Close"/>`
+        );
+        pW.document.write(
+          `<input type="button" onclick="self.print()" value="Print"/> `
+        );
+      });
+    </script>
+  </body>
+</html>

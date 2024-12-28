@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Number</title>
+  </head>
+  <body>
+    <h1>Find prime number</h1>
+
+    <script>
+      function isPrimeNumber(num) {
+        if (num < 2) return "Not a Prime Number";
+        if (num == 2) return "Prime Number";
+        for (i = 2; i < num; i++) {
+          return num % i == 0 ? "Not a prime number" : "Prime Number";
+        }
+      }
+      const result = isPrimeNumber(15);
+      document.write(result);
+    </script>
+  </body>
+</html>

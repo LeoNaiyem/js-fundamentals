@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Problem 2</title>
+  </head>
+  <body>
+    <script>
+      const friends = ["jon", "petter", "sara", "maya"];
+      const findEvenFriends = (friends) => {
+        const evenFriends = [];
+        for (const friend of friends) {
+          if (friend.length % 2 == 0) {
+            evenFriends.push(friend);
+          }
+        }
+        return evenFriends;
+      };
+      const output = findEvenFriends(friends);
+      for (friend of output) {
+        document.write(friend, "<br>");
+      }
+      console.log(output);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Largest Number</title>
+  </head>
+  <body>
+    <script>
+      const numbs = [];
+      numbs.push(
+        Number(prompt("Enter the first number.")),
+        Number(prompt("Enter the first number.")),
+        Number(prompt("Enter the first number."))
+      );
+      let largest = numbs[0];
+      for (num of numbs) {
+        if (num > largest) {
+          largest = num;
+        }
+      }
+      document.write(`The largest number of them is: ${largest}`);
+    </script>
+  </body>
+</html>

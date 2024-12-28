@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Problem 4</title>
+  </head>
+  <body>
+    <script>
+      const numbs1 = [231, 3, 4, 55];
+      const numbs2 = [3, 4, 6, 77];
+      const findMaxNumber = (array1 = [], array2 = []) => {
+        const newArray = [...array1, ...array2];
+        return (max = Math.max(...newArray));
+      };
+      document.write(findMaxNumber(numbs1, numbs2));
+    </script>
+  </body>
+</html>

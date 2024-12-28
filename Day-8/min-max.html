@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Min Max</title>
+  </head>
+  <body>
+    <script>
+      const numbs = [];
+      numbs.push(
+        parseFloat(prompt("Enter the first number.")),
+        parseFloat(prompt("Enter the first number.")),
+        parseFloat(prompt("Enter the first number."))
+      );
+      let max = numbs[0];
+      let min = numbs[0];
+      for (num of numbs) {
+        if (num > max) {
+          max = num;
+        } else if (num < min) {
+          min = num;
+        }
+      }
+      document.write("The Largest number is: ", max, "<br>");
+      document.write("The Smallest number is: ", min);
+    </script>
+  </body>
+</html>

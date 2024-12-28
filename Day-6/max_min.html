@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numbs = [];
+      numbs.push(
+        parseFloat(prompt("Enter First number.")),
+        parseFloat(prompt("Enter First number.")),
+        parseFloat(prompt("Enter First number."))
+      );
+      let largest = numbs[0];
+      let smallest = numbs[0];
+      for (num of numbs) {
+        if (num > largest) {
+          largest = num;
+        } else if (num < smallest) {
+          smallest = num;
+        }
+      }
+      document.write(
+        `Largest Number is ${largest} <br> Smallest Number is ${smallest}`
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grade System</title>
+  </head>
+  <body>
+    <script>
+      const score = Number(prompt("Enter Your score."));
+      if (isNaN(score) || score < 0 || score > 100) {
+        document.write(`Invalid Input! Enter a valid score.`);
+      } else {
+        if (score >= 90) {
+          document.write("You Got A+.");
+        } else if (score >= 80) {
+          document.write("You Got A.");
+        } else if (score >= 70) {
+          document.write("You Got A-.");
+        } else if (score >= 60) {
+          document.write("You Got B.");
+        } else if (score >= 0) {
+          document.write("You Got C.");
+        } else {
+          document.write("You have Failed.");
+        }
+      }
+    </script>
+  </body>
+</html>

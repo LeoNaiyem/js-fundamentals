@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const score = parseFloat(prompt("Enter your score"));
+      if (score >= 80 && score <= 100) {
+        document.write("You got A+");
+      } else if (score >= 70 && score < 80) {
+        document.write("You got A");
+      } else if (score >= 60 && score < 70) {
+        document.write("You got A-");
+      } else if (score >= 50 && score < 60) {
+        document.write("You got B");
+      } else if (score >= 40 && score < 50) {
+        document.write("You got C");
+      } else if (score >= 33 && score < 40) {
+        document.write("You got D");
+      } else {
+        document.write("You have Failed!");
+      }
+    </script>
+  </body>
+</html>
