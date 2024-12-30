@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #ddd;
+  vertical-align: middle;
+  min-height: 100vh;
+  display: flex;
+  font-family: sans-serif;
+}
+.container {
+  width: 70%;
+  margin: auto;
+  min-height: 80vh;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.19);
+
+  border-radius: 15px;
+  display: flex;
+}
+.form-container {
+  width: 35%;
+  border-right: 1px solid skyblue;
+  height: 100%;
+  padding: 5vh 3vw;
+}
+
+.form-container div {
+  margin-bottom: 10px;
+}
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  outline: 0px solid #0073ff;
+  border-radius: 5px;
+  transition: 0.1s ease-in-out;
+}
+.form-container input:focus {
+  outline: 1px solid #0073ff;
+}
+.form-container input[type="button"]:hover {
+  background: #0073ff;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.details-container {
+  padding-left: 2.5vw;
+  width: 65%;
+  padding: 5vh 3vw;
+  background: white;
+  border-radius: 0 15px 15px 0;
+}
+.cart-title {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  border-bottom: 1px solid skyblue;
+}
+.item {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 16px;
+  padding: 2vh 0;
+  border-bottom: 1px solid skyblue;
+}
+.pd-image {
+  width: 3vw;
+  height: 6vh;
+  border-radius: 3px;
+  background: rgb(250, 222, 222);
+}
+.pd-name {
+  font-weight: 500;
+}
+.pd-quantity {
+  display: flex;
+  gap: 15px;
+  font-style: 18px;
+}
+.pd-quantity span {
+  padding: 3px 10px;
+  background: #ddd;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.pd-quantity span:nth-child(2) {
+  background: transparent;
+  cursor: default;
+  border: 1px solid skyblue;
+  border-radius: 0;
+}
+.actions button {
+  border: none;
+  outline: none;
+  background: #7b0101;
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: white;
+  transition: background 0.1s ease-in-out;
+}
+.actions button:hover {
+  background: red;
+}

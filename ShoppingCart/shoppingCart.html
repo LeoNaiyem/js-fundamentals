@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <form action="#" name="productForm">
+          <div>
+            Product Name: <br />
+            <input
+              type="text"
+              placeholder="Enter the product name"
+              name="name"
+            />
+          </div>
+          <div>
+            Product Quantity: <br />
+            <input
+              type="number"
+              placeholder="Enter the product quantity"
+              name="quantity"
+            />
+          </div>
+          <div>
+            Product Price: <br />
+            <input
+              type="number"
+              placeholder="Enter the product price"
+              name="price"
+            />
+          </div>
+          <input id="addPd" type="button" value="Add" />
+        </form>
+      </div>
+      <div class="details-container">
+        <div class="cart-title">
+          <h2>Shopping Cart</h2>
+          <p id="item-count">0 Items</p>
+        </div>
+        <div class="product-container"></div>
+        <!-- <div class="item">
+          <div class="pd-image">
+            <img src="" alt="img" />
+          </div>
+          <div class="pd-name">
+            <p>Iphone 16pro Max</p>
+          </div>
+          <div class="pd-quantity">
+            <span>-</span>
+            <span>0</span>
+            <span>+</span>
+          </div>
+          <div class="pd-price">
+            <p>$0</p>
+          </div>
+          <div class="actions">
+            <button>Remove</button>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
